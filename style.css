@@ -47,3 +47,8 @@ body{
   font-size: 16px;
   margin-bottom: 12px;
 }
+.editor-panel .options, .controls{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
