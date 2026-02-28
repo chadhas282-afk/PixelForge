@@ -73,3 +73,17 @@ body{
   border-color: #5372F0;
   background: #5372F0;
 }
+.filter .slider{
+  margin-top: 12px;
+}
+.filter .slider .filter-info{
+  display: flex;
+  color: #464646;
+  font-size: 14px;
+  justify-content: space-between;
+}
+.filter .slider input{
+  width: 100%;
+  height: 5px;
+  accent-color: #5372F0;
+}
