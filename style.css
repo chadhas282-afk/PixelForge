@@ -31,3 +31,8 @@ body{
   font-size: 22px;
   font-weight: 500;
 }
+.container .wrapper{
+  display: flex;
+  margin: 20px 0;
+  min-height: 335px;
+}
