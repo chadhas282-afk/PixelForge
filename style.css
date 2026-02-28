@@ -13,3 +13,10 @@ body{
   justify-content: center;
   background: #E3F2FD;
 }
+.container{
+  width: 850px;
+  padding: 30px 35px 35px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
