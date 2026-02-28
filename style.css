@@ -42,3 +42,8 @@ body{
   border-radius: 5px;
   border: 1px solid #ccc;
 }
+.editor-panel .title{
+  display: block;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
