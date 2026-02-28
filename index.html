@@ -10,23 +10,37 @@
   </head>
   <body>
     <div class="container disable">
-        <h2>PixelForge</h2>
+        <h2>Easy Image Editor</h2>
         <div class="wrapper">
             <div class="editor-panel">
                 <div class="filter">
-                    <label class="title">Filters</label>
+                    <label class="title">Filters & Resize</label>
                     <div class="options">
                         <button id="brightness" class="active">Brightness</button>
                         <button id="saturation">Saturation</button>
                         <button id="inversion">Inversion</button>
                         <button id="grayscale">Grayscale</button>
+                        <button id="resize">Resize</button>
                     </div>
                     <div class="slider">
                         <div class="filter-info">
-                            <p class="name">Brighteness</p>
+                            <p class="name">Brightness</p>
                             <p class="value">100%</p>
                         </div>
                         <input type="range" value="100" min="0" max="200">
+                    </div>
+                    <div class="resize-panel">
+                        <div class="filter-info">
+                            <p class="name">Dimensions (px)</p>
+                        </div>
+                        <div class="input-group">
+                            <input type="number" id="width-input" placeholder="Width">
+                            <input type="number" id="height-input" placeholder="Height">
+                        </div>
+                        <div class="aspect-ratio">
+                            <input type="checkbox" id="aspect-ratio-check" checked>
+                            <label for="aspect-ratio-check">Lock Aspect Ratio</label>
+                        </div>
                     </div>
                 </div>
                 <div class="rotate">
@@ -52,8 +66,6 @@
             </div>
         </div>
     </div>
-
     <script src="script.js"></script>
-    
   </body>
 </html>
