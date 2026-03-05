@@ -100,3 +100,19 @@ body.dark .filter .options button {
     align-items: center;
     background: #eee;
 }
+
+.preview-img img {
+    max-width: 490px;
+    max-height: 335px;
+    object-fit: contain;
+}
+
+.crop-box {
+    display: none;
+    position: absolute;
+    border: 2px dashed #5372F0;
+    background: rgba(83, 114, 240, 0.1);
+    cursor: move;
+    box-shadow: 0 0 0 4000px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
