@@ -77,3 +77,15 @@ body.dark .editor-panel {
     background: #fff;
     border-radius: 3px;
 }
+
+body.dark .filter .options button {
+    background: #334155;
+    color: #cbd5e1;
+    border-color: #475569;
+}
+
+.filter button.active {
+    background: #5372F0 !important;
+    color: #fff !important;
+    border-color: #5372F0 !important;
+}
