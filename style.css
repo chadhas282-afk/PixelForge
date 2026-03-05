@@ -89,3 +89,14 @@ body.dark .filter .options button {
     color: #fff !important;
     border-color: #5372F0 !important;
 }
+.preview-img {
+    flex-grow: 1;
+    margin-left: 20px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eee;
+}
