@@ -116,3 +116,11 @@ body.dark .filter .options button {
     box-shadow: 0 0 0 4000px rgba(0, 0, 0, 0.5);
     z-index: 10;
 }
+
+.handle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #5372F0;
+    border-radius: 50%;
+}
