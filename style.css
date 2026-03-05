@@ -31,3 +31,9 @@ body.dark .container {
     background: #1e293b;
     color: #f8fafc;
 }
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
