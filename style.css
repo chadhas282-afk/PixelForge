@@ -37,3 +37,11 @@ body.dark .container {
     justify-content: space-between;
     margin-bottom: 20px;
 }
+
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #5372F0;
+}
