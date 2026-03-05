@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+<head>
     <meta charset="utf-8">
-    <title>PixelForge</title>
+    <title>PixelForge Pro | Ultimate Editor</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
-  </head>
-  <body>
+</head>
+<body>
     <div class="container disable">
-        <h2>Easy Image Editor</h2>
+        <div class="header-row">
+            <h2>PixelForge Pro</h2>
+            <button id="theme-toggle"><i class='bx bxs-moon'></i></button>
+        </div>
+        
         <div class="wrapper">
             <div class="editor-panel">
                 <div class="filter">
-                    <label class="title">Filters & Resize</label>
+                    <label class="title">Filters & Tools</label>
                     <div class="options">
                         <button id="brightness" class="active">Brightness</button>
                         <button id="saturation">Saturation</button>
-                        <button id="inversion">Inversion</button>
+                        <button id="contrast">Contrast</button>
+                        <button id="hue-rotate">Hue</button>
+                        <button id="blur">Blur</button>
+                        <button id="sepia">Sepia</button>
                         <button id="grayscale">Grayscale</button>
+                        <button id="inversion">Inversion</button>
                         <button id="resize">Resize</button>
+                        <button id="crop">Crop</button>
                     </div>
+                    
                     <div class="slider">
                         <div class="filter-info">
                             <p class="name">Brightness</p>
@@ -29,20 +39,30 @@
                         </div>
                         <input type="range" value="100" min="0" max="200">
                     </div>
+
                     <div class="resize-panel">
-                        <div class="filter-info">
-                            <p class="name">Dimensions (px)</p>
+                        <div class="filter-info"><p class="name">Presets</p></div>
+                        <div class="preset-buttons">
+                            <button data-w="1" data-h="1">1:1</button>
+                            <button data-w="16" data-h="9">16:9</button>
+                            <button data-w="9" data-h="16">9:16</button>
+                            <button data-w="4" data-h="5">4:5</button>
                         </div>
                         <div class="input-group">
-                            <input type="number" id="width-input" placeholder="Width">
-                            <input type="number" id="height-input" placeholder="Height">
+                            <input type="number" id="width-input" placeholder="W">
+                            <input type="number" id="height-input" placeholder="H">
                         </div>
                         <div class="aspect-ratio">
                             <input type="checkbox" id="aspect-ratio-check" checked>
-                            <label for="aspect-ratio-check">Lock Aspect Ratio</label>
+                            <label for="aspect-ratio-check">Lock Aspect</label>
                         </div>
                     </div>
+
+                    <div class="crop-controls">
+                        <button class="apply-crop">Apply Crop</button>
+                    </div>
                 </div>
+
                 <div class="rotate">
                     <label class="title">Rotate & Flip</label>
                     <div class="options">
@@ -53,19 +73,43 @@
                     </div>
                 </div>
             </div>
+
             <div class="preview-img">
                 <img src="image-placeholder.svg" alt="preview-img">
+                <div class="crop-box" id="cropBox">
+                    <div class="handle n"></div><div class="handle s"></div>
+                    <div class="handle e"></div><div class="handle w"></div>
+                    <div class="handle nw"></div><div class="handle ne"></div>
+                    <div class="handle sw"></div><div class="handle se"></div>
+                </div>
             </div>
         </div>
+
         <div class="controls">
-            <button class="reset-filter">Reset Filters</button>
             <div class="row">
+                <button id="undo-btn">Undo</button>
+                <button id="redo-btn">Redo</button>
+                <button class="compare-btn">Compare</button>
+                <button class="reset-filter">Reset</button>
+            </div>
+            
+            <div class="quality-box">
+                <div class="filter-info"><p>Quality</p><p class="quality-value">80%</p></div>
+                <input type="range" class="quality-slider" value="80" min="1" max="100">
+            </div>
+
+            <div class="row main-btns">
                 <input type="file" class="file-input" accept="image/*" hidden>
-                <button class="choose-img">Choose Image</button>
-                <button class="save-img">Save Image</button>
+                <button class="choose-img">Upload</button>
+                <select class="format-select">
+                    <option value="image/jpeg">JPG</option>
+                    <option value="image/png">PNG</option>
+                    <option value="image/webp">WebP</option>
+                </select>
+                <button class="save-img">Save</button>
             </div>
         </div>
     </div>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
