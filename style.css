@@ -130,3 +130,9 @@ body.dark .filter .options button {
     left: 50%;
     cursor: n-resize;
 }
+
+.s {
+    bottom: -5px;
+    left: 50%;
+    cursor: s-resize;
+}
