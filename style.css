@@ -63,3 +63,17 @@ body.dark .container {
     border-radius: 5px;
     border: 1px solid #ccc;
 }
+
+body.dark .editor-panel {
+    border-color: #334155;
+}
+
+.filter .options button {
+    width: calc(100% / 2 - 4px);
+    height: 35px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border: 1px solid #aaa;
+    background: #fff;
+    border-radius: 3px;
+}
