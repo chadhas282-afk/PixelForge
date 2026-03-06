@@ -196,3 +196,20 @@ body.dark .filter .options button {
     gap: 8px;
     margin-top: 10px;
 }
+
+.controls button,
+.format-select {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    flex: 1;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.save-img {
+    background: #5372F0;
+    color: #fff;
+    border: none;
+}
