@@ -160,3 +160,27 @@ body.dark .filter .options button {
     right: -5px;
     cursor: ne-resize;
 }
+.sw {
+    bottom: -5px;
+    left: -5px;
+    cursor: sw-resize;
+}
+
+.se {
+    bottom: -5px;
+    right: -5px;
+    cursor: se-resize;
+}
+
+.resize-panel,
+.crop-controls,
+.quality-box {
+    display: none;
+    margin-top: 15px;
+}
+
+.preset-buttons {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
