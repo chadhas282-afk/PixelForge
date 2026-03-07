@@ -125,10 +125,10 @@ const sY = previewImg.naturalHeight / previewImg.offsetHeight;
     ctx.filter = getComputedStyle(previewImg).filter;
     ctx.drawImage(previewImg, (cropBox.offsetLeft - previewImg.offsetLeft) * sX, (cropBox.offsetTop - previewImg.offsetTop) * sY, canvas.width, canvas.height, 0, 0, canvas.width, canvas.height);
     
-    // previewImg.src = canvas.toDataURL();
-    // isCropping = false; 
-    // cropBox.style.display = "none";
-    // document.querySelector(".crop-controls").style.display = "none";
-    // brightness = 100; saturation = 100; contrast = 100; hue = 0; blur = 0; sepia = 0; grayscale = 0; inversion = 0;
-    // updateFilters();
+    previewImg.src = canvas.toDataURL();
+    isCropping = false; 
+    cropBox.style.display = "none";
+    document.querySelector(".crop-controls").style.display = "none";
+    brightness = 100; saturation = 100; contrast = 100; hue = 0; blur = 0; sepia = 0; grayscale = 0; inversion = 0;
+    updateFilters();
 });
