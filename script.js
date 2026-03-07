@@ -42,3 +42,9 @@ const captureState = () => {
         d: { w: widthInput.value, h: heightInput.value }
     });
 };
+
+const saveState = () => {
+    historyStack.push(captureState());
+    if(historyStack.length > 20) historyStack.shift();
+    redoStack = []; 
+};
