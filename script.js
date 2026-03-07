@@ -154,10 +154,10 @@ filterOptions.forEach(btn => {
         filterName.innerText = btn.innerText;
         const isSpecial = ["resize", "crop"].includes(btn.id);
         sliderContainer.style.display = isSpecial ? "none" : "block";
-        // resizePanel.style.display = btn.id === "resize" ? "block" : "none";
-        // cropControls.style.display = btn.id === "crop" ? "block" : "none";
-        // cropBox.style.display = btn.id === "crop" ? "block" : "none";
-        // isCropping = btn.id === "crop";
-        // updateFilters();
+        resizePanel.style.display = btn.id === "resize" ? "block" : "none";
+        cropControls.style.display = btn.id === "crop" ? "block" : "none";
+        cropBox.style.display = btn.id === "crop" ? "block" : "none";
+        isCropping = btn.id === "crop";
+        updateFilters();
     };
 });
