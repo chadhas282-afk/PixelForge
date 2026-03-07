@@ -120,10 +120,10 @@ document.querySelector(".apply-crop").addEventListener("click", () => {
     const sX = previewImg.naturalWidth / previewImg.offsetWidth;
 const sY = previewImg.naturalHeight / previewImg.offsetHeight;
 
-    // canvas.width = cropBox.offsetWidth * sX;
-    // canvas.height = cropBox.offsetHeight * sY;
-    // ctx.filter = getComputedStyle(previewImg).filter;
-    // ctx.drawImage(previewImg, (cropBox.offsetLeft - previewImg.offsetLeft) * sX, (cropBox.offsetTop - previewImg.offsetTop) * sY, canvas.width, canvas.height, 0, 0, canvas.width, canvas.height);
+    canvas.width = cropBox.offsetWidth * sX;
+    canvas.height = cropBox.offsetHeight * sY;
+    ctx.filter = getComputedStyle(previewImg).filter;
+    ctx.drawImage(previewImg, (cropBox.offsetLeft - previewImg.offsetLeft) * sX, (cropBox.offsetTop - previewImg.offsetTop) * sY, canvas.width, canvas.height, 0, 0, canvas.width, canvas.height);
     
     // previewImg.src = canvas.toDataURL();
     // isCropping = false; 
