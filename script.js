@@ -91,11 +91,11 @@ window.addEventListener("mousemove", (e) => {
     const rect = document.querySelector(".preview-img").getBoundingClientRect();
     const dx = e.clientX - startX, dy = e.clientY - startY;
 
-    // if(activeDragging) {
-    //     let l = Math.max(0, Math.min(startL + dx, rect.width - cropBox.offsetWidth));
-    //     let t = Math.max(0, Math.min(startT + dy, rect.height - cropBox.offsetHeight));
-    //     cropBox.style.left = l + "px"; cropBox.style.top = t + "px";
-    // }
+    if(activeDragging) {
+        let l = Math.max(0, Math.min(startL + dx, rect.width - cropBox.offsetWidth));
+        let t = Math.max(0, Math.min(startT + dy, rect.height - cropBox.offsetHeight));
+        cropBox.style.left = l + "px"; cropBox.style.top = t + "px";
+    }
 
     // if(activeResizing) {
     //     if(currentHandle.includes("e")) cropBox.style.width = Math.min(startW + dx, rect.width - cropBox.offsetLeft) + "px";
