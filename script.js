@@ -68,3 +68,20 @@ const applyState = (s) => {
     widthInput.value = s.d.w; heightInput.value = s.d.h;
     updateFilters();
 };
+
+let activeDragging = false, activeResizing = false, currentHandle = "";
+let startX, startY, startW, startH, startL, startT;
+
+cropBox.addEventListener("mousedown", (e) => {
+    startX = e.clientX; startY = e.clientY;
+    startW = cropBox.offsetWidth; startH = cropBox.offsetHeight;
+    startL = cropBox.offsetLeft; startT = cropBox.offsetTop;
+    
+    if(e.target.classList.contains("handle")) {
+        activeResizing = true;
+        currentHandle = e.target.classList[1];
+    } else {
+        activeDragging = true;
+    }
+    e.preventDefault();
+});
