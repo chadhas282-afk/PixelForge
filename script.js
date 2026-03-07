@@ -48,3 +48,9 @@ const saveState = () => {
     if(historyStack.length > 20) historyStack.shift();
     redoStack = []; 
 };
+
+undoBtn.onclick = () => {
+    if (!historyStack.length) return;
+    redoStack.push(captureState());
+    applyState(JSON.parse(historyStack.pop()));
+};
