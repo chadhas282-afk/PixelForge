@@ -27,3 +27,9 @@ const fileInput = document.querySelector(".file-input"),
 let rotate = 0, flipH = 1, flipV = 1;
 let historyStack = [], redoStack = [], ogAspectRatio = 1, isCropping = false;
 
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    const isDark = document.body.classList.contains("dark");
+    themeToggle.innerHTML = isDark ? "<i class='bx bxs-sun'></i>" : "<i class='bx bxs-moon'></i>";
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+});
