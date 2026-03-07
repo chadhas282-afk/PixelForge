@@ -54,3 +54,9 @@ undoBtn.onclick = () => {
     redoStack.push(captureState());
     applyState(JSON.parse(historyStack.pop()));
 };
+
+redoBtn.onclick = () => {
+    if (!redoStack.length) return;
+    historyStack.push(captureState());
+    applyState(JSON.parse(redoStack.pop()));
+};
