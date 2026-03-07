@@ -104,9 +104,9 @@ window.addEventListener("mousemove", (e) => {
             let nw = Math.max(50, startW - dx);
             cropBox.style.width = nw + "px"; cropBox.style.left = (startL + (startW - nw)) + "px";
         }
-        // if(currentHandle.includes("n")) {
-        //     let nh = Math.max(50, startH - dy);
-        //     cropBox.style.height = nh + "px"; cropBox.style.top = (startT + (startH - nh)) + "px";
-        // }
+        if(currentHandle.includes("n")) {
+            let nh = Math.max(50, startH - dy);
+            cropBox.style.height = nh + "px"; cropBox.style.top = (startT + (startH - nh)) + "px";
+        }
     }
 });
