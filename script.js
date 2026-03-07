@@ -85,3 +85,28 @@ cropBox.addEventListener("mousedown", (e) => {
     }
     e.preventDefault();
 });
+
+window.addEventListener("mousemove", (e) => {
+    if(!isCropping) return;
+    const rect = document.querySelector(".preview-img").getBoundingClientRect();
+    const dx = e.clientX - startX, dy = e.clientY - startY;
+
+    // if(activeDragging) {
+    //     let l = Math.max(0, Math.min(startL + dx, rect.width - cropBox.offsetWidth));
+    //     let t = Math.max(0, Math.min(startT + dy, rect.height - cropBox.offsetHeight));
+    //     cropBox.style.left = l + "px"; cropBox.style.top = t + "px";
+    // }
+
+    // if(activeResizing) {
+    //     if(currentHandle.includes("e")) cropBox.style.width = Math.min(startW + dx, rect.width - cropBox.offsetLeft) + "px";
+    //     if(currentHandle.includes("s")) cropBox.style.height = Math.min(startH + dy, rect.height - cropBox.offsetTop) + "px";
+    //     if(currentHandle.includes("w")) {
+    //         let nw = Math.max(50, startW - dx);
+    //         cropBox.style.width = nw + "px"; cropBox.style.left = (startL + (startW - nw)) + "px";
+    //     }
+        // if(currentHandle.includes("n")) {
+        //     let nh = Math.max(50, startH - dy);
+        //     cropBox.style.height = nh + "px"; cropBox.style.top = (startT + (startH - nh)) + "px";
+        // }
+    // }
+});
