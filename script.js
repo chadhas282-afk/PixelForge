@@ -187,3 +187,11 @@ filterSlider.addEventListener("input", () => {
     else if(id === "inversion") inversion = val;
     updateFilters();
 });
+
+resetFilterBtn.onclick = () => {
+    saveState();
+    brightness = 100; saturation = 100; contrast = 100; hue = 0; blur = 0; sepia = 0; grayscale = 0; inversion = 0;
+    rotate = 0; flipH = 1; flipV = 1;
+    widthInput.value = previewImg.naturalWidth; heightInput.value = previewImg.naturalHeight;
+    updateFilters();
+};
