@@ -161,3 +161,14 @@ filterOptions.forEach(btn => {
         updateFilters();
     };
 });
+
+rotateOptions.forEach(btn => {
+    btn.onclick = () => {
+        saveState();
+        if(btn.id === "left") rotate -= 90;
+        else if(btn.id === "right") rotate += 90;
+        else if(btn.id === "horizontal") flipH *= -1;
+        else flipV *= -1;
+        updateFilters();
+    };
+});
