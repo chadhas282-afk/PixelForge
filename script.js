@@ -172,3 +172,18 @@ rotateOptions.forEach(btn => {
         updateFilters();
     };
 });
+
+filterSlider.addEventListener("change", saveState);
+filterSlider.addEventListener("input", () => {
+    const id = document.querySelector(".filter .active").id;
+    const val = filterSlider.value;
+    if(id === "brightness") brightness = val;
+    else if(id === "saturation") saturation = val;
+    else if(id === "contrast") contrast = val;
+    else if(id === "hue-rotate") hue = val;
+    else if(id === "blur") blur = val;
+    else if(id === "sepia") sepia = val;
+    else if(id === "grayscale") grayscale = val;
+    else if(id === "inversion") inversion = val;
+    updateFilters();
+});
