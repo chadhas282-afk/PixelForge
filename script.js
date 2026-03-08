@@ -198,3 +198,4 @@ resetFilterBtn.onclick = () => {
 
 compareBtn.onmousedown = () => { previewImg.style.filter = "none"; previewImg.style.transform = "none"; };
 compareBtn.onmouseup = updateFilters;
+compareBtn.onmouseleave = updateFilters;
