@@ -201,4 +201,6 @@ compareBtn.onmouseup = updateFilters;
 compareBtn.onmouseleave = updateFilters;
 chooseImgBtn.onclick = () => fileInput.click();
 
-fileInput.onchange = () => {}
+fileInput.onchange = () => {
+    const file = fileInput.files[0];
+}
