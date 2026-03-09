@@ -223,4 +223,7 @@ saveImgBtn.onclick = () => {
     ctx.scale(flipH, flipV);
     ctx.drawImage(previewImg, -canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
     const link = document.createElement("a");
+    link.download = `pixel-forge-export.${formatSelect.value.split('/')[1]}`;
+    link.href = canvas.toDataURL(formatSelect.value, qualitySlider.value / 100);
+    link.click();
 }
