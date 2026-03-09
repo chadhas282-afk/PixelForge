@@ -212,3 +212,7 @@ fileInput.onchange = () => {
         updateFilters();
     }
 }
+
+saveImgBtn.onclick = () => {
+    
+}
