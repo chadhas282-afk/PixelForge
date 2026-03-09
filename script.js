@@ -214,5 +214,5 @@ fileInput.onchange = () => {
 }
 
 saveImgBtn.onclick = () => {
-    
+    const canvas = document.createElement("canvas");
 }
