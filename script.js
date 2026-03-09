@@ -207,5 +207,6 @@ fileInput.onchange = () => {
      previewImg.src = URL.createObjectURL(file);
      previewImg.onload = () => {
         document.querySelector(".container").classList.remove("disable");
+        widthInput.value = previewImg.naturalWidth; heightInput.value = previewImg.naturalHeight;
      }
 }
