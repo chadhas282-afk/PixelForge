@@ -219,4 +219,5 @@ saveImgBtn.onclick = () => {
     canvas.width = widthInput.value; canvas.height = heightInput.value;
     ctx.filter = previewImg.style.filter;
     ctx.translate(canvas.width / 2, canvas.height / 2);
+    ctx.rotate(rotate * Math.PI / 180);
 }
