@@ -209,5 +209,6 @@ fileInput.onchange = () => {
         document.querySelector(".container").classList.remove("disable");
         widthInput.value = previewImg.naturalWidth; heightInput.value = previewImg.naturalHeight;
         ogAspectRatio = previewImg.naturalWidth / previewImg.naturalHeight;
+        updateFilters();
     }
 }
