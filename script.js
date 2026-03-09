@@ -204,4 +204,5 @@ chooseImgBtn.onclick = () => fileInput.click();
 fileInput.onchange = () => {
     const file = fileInput.files[0];
      if(!file) return;
+     previewImg.src = URL.createObjectURL(file);
 }
