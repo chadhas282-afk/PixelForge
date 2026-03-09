@@ -218,4 +218,5 @@ saveImgBtn.onclick = () => {
     const ctx = canvas.getContext("2d");
     canvas.width = widthInput.value; canvas.height = heightInput.value;
     ctx.filter = previewImg.style.filter;
+    ctx.translate(canvas.width / 2, canvas.height / 2);
 }
