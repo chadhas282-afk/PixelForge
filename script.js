@@ -206,6 +206,6 @@ fileInput.onchange = () => {
      if(!file) return;
      previewImg.src = URL.createObjectURL(file);
      previewImg.onload = () => {
-        
+        document.querySelector(".container").classList.remove("disable");
      }
 }
