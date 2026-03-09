@@ -200,3 +200,5 @@ compareBtn.onmousedown = () => { previewImg.style.filter = "none"; previewImg.st
 compareBtn.onmouseup = updateFilters;
 compareBtn.onmouseleave = updateFilters;
 chooseImgBtn.onclick = () => fileInput.click();
+
+fileInput.onchange = () => {}
