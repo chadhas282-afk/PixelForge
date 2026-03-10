@@ -232,5 +232,8 @@ widthInput.addEventListener("input", () => {
     if (aspectCheck.checked && ogAspectRatio){
         heightInput.value = Math.round(widthInput.value / ogAspectRatio);
     }
-
 })
+
+const undoAction = () => {
+    
+}
