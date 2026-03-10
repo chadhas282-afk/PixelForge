@@ -240,4 +240,5 @@ const undoAction = () => {
      const s = JSON.parse(historyStack.pop());
      ({brightness, saturation, contrast, hue, blur, sepia, grayscale, inversion} = s.f);
     ({rotate, flipH, flipV} = s.t);
+    previewImg.src = s.src;
 }
