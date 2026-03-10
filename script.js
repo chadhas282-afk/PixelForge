@@ -239,4 +239,5 @@ const undoAction = () => {
      redoStack.push(captureState());
      const s = JSON.parse(historyStack.pop());
      ({brightness, saturation, contrast, hue, blur, sepia, grayscale, inversion} = s.f);
+    ({rotate, flipH, flipV} = s.t);
 }
