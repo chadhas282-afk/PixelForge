@@ -229,6 +229,8 @@ saveImgBtn.onclick = () => {
 }
 
 widthInput.addEventListener("input", () => {
+    if (aspectCheck.checked && ogAspectRatio){
+        
+    }
 
-    
 })
