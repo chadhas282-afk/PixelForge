@@ -235,5 +235,5 @@ widthInput.addEventListener("input", () => {
 })
 
 const undoAction = () => {
-    
+     if (!historyStack.length) return;
 }
