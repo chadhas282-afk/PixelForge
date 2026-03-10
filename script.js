@@ -245,3 +245,4 @@ const undoAction = () => {
 };
 
 undoBtn.onclick = undoAction;
+redoBtn.onclick = redoAction;
