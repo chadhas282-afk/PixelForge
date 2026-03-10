@@ -243,3 +243,5 @@ const undoAction = () => {
     previewImg.src = s.src;
     updateFilters();
 };
+
+undoBtn.onclick = undoAction;
