@@ -237,4 +237,5 @@ widthInput.addEventListener("input", () => {
 const undoAction = () => {
      if (!historyStack.length) return;
      redoStack.push(captureState());
+     const s = JSON.parse(historyStack.pop());
 }
