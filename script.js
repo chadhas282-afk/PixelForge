@@ -227,3 +227,8 @@ saveImgBtn.onclick = () => {
     link.href = canvas.toDataURL(formatSelect.value, qualitySlider.value / 100);
     link.click();
 }
+
+widthInput.addEventListener("input", () => {
+
+    
+})
