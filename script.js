@@ -239,6 +239,10 @@ const undoAction = () => {
     previewImg.src = s.src; 
     updateFilters();
 };
-
+const redoAction = () => {
+    if (!redoStack.length) return;
+    historyStack.push(captureState());
+    applyState(JSON.parse(redoStack.pop()));
+};
 undoBtn.onclick = undoAction;
 redoBtn.onclick = redoAction;
